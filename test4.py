@@ -21,7 +21,3 @@ print("Optimal expected return:", prob.value)
 print("Optimal investment in asset 1:", x1.value)
 print("Optimal investment in asset 2:", x2.value)
 
-# In giá trị dual solution (Lagrange multipliers)
-print("Dual solutions (Lagrange multipliers):")
-for i, cons in enumerate(prob.constraints):
-    print(f"Constraint {i + 1}: λ = {cons.dual_value}")
