@@ -13,7 +13,7 @@ b = np.random.randn(m)
 x = cp.Variable(n) #biến quyết định x
 cost = cp.sum_squares(A @ x - b)  #Hàm mục tiêu      
 prob = cp.Problem(cp.Minimize(cost)) #tối thiểu hóa hàm mục tiêu 
-prob.solve() #giải bài toán 
+prob.solve(solver = cp.MOSEK) #giải bài toán 
 
 # Print result.
 print("\nThe optimal value is", prob.value) #giá trị tối ưu của hàm mục tiêu
